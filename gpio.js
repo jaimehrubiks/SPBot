@@ -5,12 +5,11 @@ const Gpio = require('pigpio').Gpio;
 /* GPIO CONFIGURATION */ 
 
 // Servo_Configuration
-var servo = [{}, {}, {}];
-servo[0].io = new Gpio(2, {mode: Gpio.OUTPUT});
-servo[1].io = new Gpio(3, {mode: Gpio.OUTPUT});
-servo[2].io = new Gpio(4, {mode: Gpio.OUTPUT});
-var servo_minPulse = 850;
-var servo_maxPulse = 2500; // 750 1450 el 1 y 2
+var servo = [{
+    io: new Gpio(2, {mode: Gpio.OUTPUT}), minPulse: 850, maxPulse: 2500}, {
+    io: new Gpio(3, {mode: Gpio.OUTPUT}), minPulse: 750, maxPulse: 2450}, {
+    io: new Gpio(4, {mode: Gpio.OUTPUT}), minPulse: 750, maxPulse: 2450}
+];
 
 // Leds_Configuracion
 
@@ -18,7 +17,8 @@ var servo_maxPulse = 2500; // 750 1450 el 1 y 2
 function move_servo(servo_n, range){
     if (range == -1) servo[servo_n].io.servoWrite(0);
     else if (range<0 || range>1) { console.log('Err. Servo range goes from 0 to 1'); return; }
-    range = servo_minPulse + range*(servo_maxPulse-servo_minPulse);
+    range = Math.round( servo[servo_n].minPulse + range*(servo[servo_n].maxPulse-servo[servo_n].minPulse) );
+    // console.log('moving servo: ' + servo_n + ' to position: ' + range);
     servo[servo_n].io.servoWrite(range);
 }
 
