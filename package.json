@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nanotimer": "^0.3.15",
     "omxdirector": "^0.1.2",
     "pigpio": "^0.6.3",
     "soundplayer": "^1.1.1"
