@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Song 1
+# - babayetu.mp3
+# - babayetu.json
+gsjson -w 0 1kZFcW__4xkK7usIgqS7lYppz9_Orxn1FJro-L5x_xhw babayetu.json
+
+# Song 2
+# - darudesandstorm.mp3
+# - darudesandstorm.json
+gsjson -w 1 1kZFcW__4xkK7usIgqS7lYppz9_Orxn1FJro-L5x_xhw darudesandstorm.json
+
+# Song 3
+# - wemashuptheplace.mp3
+# - wemashuptheplace.json
+gsjson -w 2 1kZFcW__4xkK7usIgqS7lYppz9_Orxn1FJro-L5x_xhw wemashuptheplace.json
