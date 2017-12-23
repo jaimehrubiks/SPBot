@@ -1,3 +1,0 @@
-babayetu.mp3 babayetu.json
-darudesandstorm.mp3 darudesandstorm.json
-wemashuptheplace.mp3 wemashuptheplace.json

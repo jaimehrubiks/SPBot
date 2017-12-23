@@ -1,0 +1,14 @@
+[
+    {
+        "song": "babayetu.mp3",
+        "data": "babayetu.json"
+    },
+    {
+        "song": "darudesandstorm.mp3",
+        "data": "darudesandstorm.json"
+    },
+    {
+        "song": "wemashuptheplace.mp3",
+        "data": "wemashuptheplace.json"
+    }
+]
